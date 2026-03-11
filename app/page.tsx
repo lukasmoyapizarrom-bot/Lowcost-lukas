@@ -2,6 +2,7 @@ type Producto = {
   nombre: string
   descripcion: string
   emoji: string
+  precio: string
 }
 
 const productos: Producto[] = [
@@ -9,31 +10,37 @@ const productos: Producto[] = [
     nombre: 'Pan fresco',
     descripcion: 'Hallullas, marraquetas y pan amasado recién hecho cada día.',
     emoji: '🥖',
+    precio: 'Desde $1.000',
   },
   {
     nombre: 'Mayonesa',
     descripcion: 'Perfecta para completos, sandwiches y preparaciones rápidas.',
     emoji: '🥪',
+    precio: '$1.500',
   },
   {
     nombre: 'Abarrotes',
     descripcion: 'Arroz, fideos, azúcar, aceite y productos básicos para tu casa.',
     emoji: '🛍️',
+    precio: 'Desde $1.200',
   },
   {
     nombre: 'Bebidas',
     descripcion: 'Gaseosas, jugos y bebidas para acompañar tus comidas.',
     emoji: '🥤',
+    precio: 'Desde $900',
   },
   {
     nombre: 'Snacks',
     descripcion: 'Papas fritas, galletas y dulces para cualquier momento.',
     emoji: '🍪',
+    precio: 'Desde $700',
   },
   {
     nombre: 'Productos de feria',
     descripcion: 'Frutas y verduras frescas según disponibilidad del día.',
     emoji: '🍎',
+    precio: 'Precio del día',
   },
 ]
 
@@ -45,7 +52,7 @@ const destacados = [
   },
   {
     titulo: 'Productos frescos',
-    texto: 'Una maqueta visual pensada para mostrar feria, pan y abarrotes con estilo.',
+    texto: 'Una vitrina pensada para mostrar feria, pan y abarrotes con estilo.',
     emoji: '🌿',
   },
   {
@@ -53,6 +60,13 @@ const destacados = [
     texto: 'Botón directo para que tus clientes te escriban apenas entren a la página.',
     emoji: '💬',
   },
+]
+
+const ofertas = [
+  'Pan hallulla recién hecho',
+  'Mayonesa ideal para completos',
+  'Frutas y verduras del día',
+  'Bebidas frías y snacks',
 ]
 
 export default function Page() {
@@ -73,8 +87,9 @@ export default function Page() {
           <nav className="hidden gap-6 text-sm font-semibold text-zinc-700 md:flex">
             <a href="#inicio" className="transition hover:text-orange-600">Inicio</a>
             <a href="#productos" className="transition hover:text-orange-600">Productos</a>
-            <a href="#destacados" className="transition hover:text-orange-600">Destacados</a>
-            <a href="#nosotros" className="transition hover:text-orange-600">Nosotros</a>
+            <a href="#ofertas" className="transition hover:text-orange-600">Ofertas</a>
+            <a href="#galeria" className="transition hover:text-orange-600">Galería</a>
+            <a href="#ubicacion" className="transition hover:text-orange-600">Ubicación</a>
             <a href="#contacto" className="transition hover:text-orange-600">Contacto</a>
           </nav>
         </div>
@@ -86,15 +101,15 @@ export default function Page() {
 
         <div className="relative">
           <span className="inline-flex items-center rounded-full border border-orange-200 bg-white/80 px-4 py-2 text-sm font-semibold text-orange-700 shadow-sm">
-            Feria, pan y abarrotes en una maqueta moderna
+            Feria, pan y abarrotes en una vitrina moderna
           </span>
 
           <h2 className="mt-6 text-4xl font-black tracking-tight text-zinc-900 md:text-6xl">
-            Un diseño más fresco, colorido y cercano para tu negocio
+            Un diseño fresco, colorido y listo para vender
           </h2>
 
           <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-700">
-            Esta maqueta está pensada para que mañana solo reemplacemos las imágenes de ejemplo por tus fotos reales y tu página ya se vea como una tienda de verdad.
+            Lowcost Lukas reúne productos de feria, abarrotes, pan fresco y básicos del día con una imagen cercana, práctica y pensada para compartir por WhatsApp e Instagram.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -107,6 +122,8 @@ export default function Page() {
 
             <a
               href="https://wa.me/56950137514"
+              target="_blank"
+              rel="noreferrer"
               className="rounded-2xl border border-orange-200 bg-white px-6 py-3 text-sm font-bold text-zinc-800 shadow-sm transition hover:bg-orange-50"
             >
               Pedir por WhatsApp
@@ -134,9 +151,9 @@ export default function Page() {
             <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-xl shadow-orange-100 ring-1 ring-orange-100 md:col-span-2">
               <div className="flex h-64 items-end rounded-[1.5rem] bg-[linear-gradient(135deg,_#fdba74,_#fde68a,_#bbf7d0)] p-6">
                 <div className="rounded-2xl bg-white/85 px-5 py-4 shadow-sm backdrop-blur">
-                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-orange-700">Imagen de maqueta</p>
-                  <h3 className="mt-2 text-2xl font-black">Canasta de feria</h3>
-                  <p className="mt-1 text-sm text-zinc-600">Aquí mañana podemos poner una foto real de tus productos.</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-orange-700">Vitrina principal</p>
+                  <h3 className="mt-2 text-2xl font-black">Productos del día</h3>
+                  <p className="mt-1 text-sm text-zinc-600">Aquí mañana pondremos una foto real de tus productos o del local.</p>
                 </div>
               </div>
             </div>
@@ -164,7 +181,7 @@ export default function Page() {
             </span>
             <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">Productos principales</h2>
             <p className="mx-auto mt-3 max-w-2xl text-zinc-600">
-              Dejé una selección de categorías para que la página ya tenga forma. Mañana podemos reemplazar cada bloque por productos reales y fotos de tu negocio.
+              Ya quedó agregada una maqueta con precios de referencia para que tu página se vea más real desde ahora.
             </p>
           </div>
 
@@ -178,7 +195,12 @@ export default function Page() {
                   {producto.emoji}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-black text-zinc-900">{producto.nombre}</h3>
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-xl font-black text-zinc-900">{producto.nombre}</h3>
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-xs font-bold text-orange-700">
+                      {producto.precio}
+                    </span>
+                  </div>
                   <p className="mt-3 text-sm leading-6 text-zinc-700">{producto.descripcion}</p>
                   <div className="mt-5 h-1 w-16 rounded-full bg-gradient-to-r from-orange-400 to-amber-300 transition-all duration-300 group-hover:w-24" />
                 </div>
@@ -188,7 +210,35 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="destacados" className="py-6">
+      <section id="ofertas" className="py-8">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="overflow-hidden rounded-[2rem] bg-gradient-to-r from-orange-500 via-amber-400 to-lime-400 p-[1px] shadow-[0_18px_50px_rgba(251,146,60,0.18)]">
+            <div className="rounded-[calc(2rem-1px)] bg-white px-8 py-10">
+              <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+                <div className="max-w-xl">
+                  <span className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700">
+                    Ofertas del día
+                  </span>
+                  <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">Una sección lista para promociones</h2>
+                  <p className="mt-4 text-zinc-600">
+                    Agregué este bloque para que tu página se vea más comercial. Después podemos cambiarlo por ofertas reales, combos o promociones especiales.
+                  </p>
+                </div>
+
+                <div className="grid gap-3 md:min-w-[320px]">
+                  {ofertas.map((oferta) => (
+                    <div key={oferta} className="rounded-2xl bg-orange-50 px-4 py-3 font-semibold text-zinc-800 ring-1 ring-orange-100">
+                      {oferta}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destacados" className="py-14">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-6 md:grid-cols-3">
             {destacados.map((item) => (
@@ -200,6 +250,48 @@ export default function Page() {
                 <p className="mt-3 leading-7 text-zinc-600">{item.texto}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" className="py-10">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center">
+            <span className="inline-flex rounded-full bg-lime-100 px-4 py-2 text-sm font-semibold text-lime-700">
+              Galería de ejemplo
+            </span>
+            <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">Espacio para tus fotos reales</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-zinc-600">
+              Dejé una galería visual de maqueta para que mañana solo reemplacemos estas cajas por imágenes reales de productos, local y vitrinas.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-sm ring-1 ring-orange-100 md:col-span-2">
+              <div className="flex h-72 items-center justify-center rounded-[1.5rem] bg-[linear-gradient(135deg,_#fdba74,_#fef3c7,_#dcfce7)] text-center text-7xl">
+                🥬
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-sm ring-1 ring-orange-100">
+              <div className="flex h-72 items-center justify-center rounded-[1.5rem] bg-[linear-gradient(135deg,_#fef3c7,_#fecaca)] text-7xl">
+                🧃
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-sm ring-1 ring-orange-100">
+              <div className="flex h-56 items-center justify-center rounded-[1.5rem] bg-[linear-gradient(135deg,_#dcfce7,_#dbeafe)] text-7xl">
+                🍞
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-sm ring-1 ring-orange-100">
+              <div className="flex h-56 items-center justify-center rounded-[1.5rem] bg-[linear-gradient(135deg,_#fde68a,_#fed7aa)] text-7xl">
+                🍅
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-sm ring-1 ring-orange-100">
+              <div className="flex h-56 items-center justify-center rounded-[1.5rem] bg-[linear-gradient(135deg,_#bbf7d0,_#fef3c7)] text-7xl">
+                🥤
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -224,19 +316,73 @@ export default function Page() {
             </div>
 
             <div className="rounded-[1.75rem] bg-white p-6 shadow-sm ring-1 ring-orange-100">
-              <h3 className="text-xl font-black">Maqueta con imágenes</h3>
-              <p className="mt-2 text-zinc-600">Por ahora dejé imágenes de maqueta con fondos visuales y símbolos. Mañana las cambiamos por fotos reales.</p>
+              <h3 className="text-xl font-black">Mapa y ubicación</h3>
+              <p className="mt-2 text-zinc-600">Ya quedó incorporada una sección para mostrar dónde está tu negocio y facilitar que la gente llegue o te ubique rápido.</p>
             </div>
 
             <div className="rounded-[1.75rem] bg-white p-6 shadow-sm ring-1 ring-orange-100">
-              <h3 className="text-xl font-black">Preparada para crecer</h3>
-              <p className="mt-2 text-zinc-600">Luego podemos agregar precios, ofertas del día, delivery y una galería de productos reales.</p>
+              <h3 className="text-xl font-black">Lista para crecer</h3>
+              <p className="mt-2 text-zinc-600">Luego podemos agregar fotos reales, precios exactos, delivery, catálogo completo y promociones activas.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contacto" className="pb-24 pt-8">
+      <section id="ubicacion" className="py-10">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-8 md:grid-cols-2 md:items-stretch">
+            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-orange-100">
+              <span className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700">
+                Ubicación
+              </span>
+              <h2 className="mt-4 text-3xl font-black tracking-tight">Encuéntranos en Ñuñoa</h2>
+              <p className="mt-4 leading-7 text-zinc-600">
+                Lowcost Lukas está ubicado en Til Til 1980, Ñuñoa. También puedes escribirnos por WhatsApp o ver nuestras novedades en Instagram.
+              </p>
+
+              <div className="mt-6 space-y-3 text-zinc-700">
+                <p><span className="font-bold">Dirección:</span> Til Til 1980, Ñuñoa</p>
+                <p><span className="font-bold">Horario:</span> 09:00 a 21:00</p>
+                <p><span className="font-bold">WhatsApp:</span> +56 9 5013 7514</p>
+                <p><span className="font-bold">Instagram:</span> @lowcostlukas</p>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="https://wa.me/56950137514"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl bg-green-500 px-5 py-3 font-bold text-white shadow-lg shadow-green-200"
+                >
+                  Escribir por WhatsApp
+                </a>
+                <a
+                  href="https://www.instagram.com/lowcostlukas"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border border-orange-200 bg-white px-5 py-3 font-bold text-zinc-800 shadow-sm"
+                >
+                  Ver Instagram
+                </a>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-sm ring-1 ring-orange-100">
+              <iframe
+                src="https://www.google.com/maps?q=Til%20Til%201980%20%C3%91u%C3%B1oa&output=embed"
+                width="100%"
+                height="100%"
+                className="min-h-[380px] rounded-[1.5rem] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mapa de Lowcost Lukas"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" className="pb-24 pt-10">
         <div className="mx-auto max-w-4xl px-6">
           <div className="overflow-hidden rounded-[2rem] bg-gradient-to-r from-orange-500 via-amber-400 to-lime-400 p-[1px] shadow-[0_18px_50px_rgba(251,146,60,0.22)]">
             <div className="rounded-[calc(2rem-1px)] bg-white px-8 py-10 text-center">
@@ -246,7 +392,7 @@ export default function Page() {
 
               <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">Haz tu pedido</h2>
               <p className="mx-auto mt-4 max-w-2xl text-zinc-600">
-                Tu maqueta ya quedó lista con tus datos reales para que mañana solo sumemos fotos y detalles finales.
+                La página ya quedó con mapa, catálogo, precios de referencia, galería de ejemplo y enlaces directos para que se vea mucho más profesional.
               </p>
 
               <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -271,12 +417,24 @@ export default function Page() {
                 </div>
               </div>
 
-              <a
-                href="https://wa.me/56950137514"
-                className="mt-8 inline-block rounded-2xl bg-green-500 px-6 py-3 font-bold text-white shadow-lg shadow-green-200 transition hover:-translate-y-0.5"
-              >
-                Pedir por WhatsApp
-              </a>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+                <a
+                  href="https://wa.me/56950137514"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block rounded-2xl bg-green-500 px-6 py-3 font-bold text-white shadow-lg shadow-green-200 transition hover:-translate-y-0.5"
+                >
+                  Pedir por WhatsApp
+                </a>
+                <a
+                  href="https://www.instagram.com/lowcostlukas"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block rounded-2xl border border-orange-200 bg-white px-6 py-3 font-bold text-zinc-800 shadow-sm transition hover:bg-orange-50"
+                >
+                  Ir a Instagram
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -284,6 +442,8 @@ export default function Page() {
 
       <a
         href="https://wa.me/56950137514"
+        target="_blank"
+        rel="noreferrer"
         className="fixed bottom-6 right-6 z-40 flex items-center gap-3 rounded-full bg-green-500 px-5 py-3 font-bold text-white shadow-2xl shadow-green-300 transition hover:scale-105"
       >
         <span className="text-xl">💬</span>
@@ -291,11 +451,20 @@ export default function Page() {
       </a>
 
       <footer className="border-t border-orange-200/70 bg-white/80 py-8 backdrop-blur">
-        <div className="mx-auto max-w-6xl px-6 text-sm text-zinc-500">
-          © 2026 Lowcost Lukas. Todos los derechos reservados.
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 Lowcost Lukas. Todos los derechos reservados.</p>
+          <div className="flex gap-4">
+            <a href="https://wa.me/56950137514" target="_blank" rel="noreferrer" className="hover:text-zinc-800">
+              WhatsApp
+            </a>
+            <a href="https://www.instagram.com/lowcostlukas" target="_blank" rel="noreferrer" className="hover:text-zinc-800">
+              Instagram
+            </a>
+          </div>
         </div>
       </footer>
     </main>
   )
 }
+
 
