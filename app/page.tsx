@@ -328,59 +328,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="ubicacion" className="py-10">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-8 md:grid-cols-2 md:items-stretch">
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-orange-100">
-              <span className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700">
-                Ubicación
-              </span>
-              <h2 className="mt-4 text-3xl font-black tracking-tight">Encuéntranos en Ñuñoa</h2>
-              <p className="mt-4 leading-7 text-zinc-600">
-                Lowcost Lukas está ubicado en Til Til 1980, Ñuñoa. También puedes escribirnos por WhatsApp o ver nuestras novedades en Instagram.
-              </p>
-
-              <div className="mt-6 space-y-3 text-zinc-700">
-                <p><span className="font-bold">Dirección:</span> Til Til 1980, Ñuñoa</p>
-                <p><span className="font-bold">Horario:</span> 09:00 a 21:00</p>
-                <p><span className="font-bold">WhatsApp:</span> +56 9 5013 7514</p>
-                <p><span className="font-bold">Instagram:</span> @lowcostlukas</p>
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="https://wa.me/56950137514"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-2xl bg-green-500 px-5 py-3 font-bold text-white shadow-lg shadow-green-200"
-                >
-                  Escribir por WhatsApp
-                </a>
-                <a
-                  href="https://www.instagram.com/lowcostlukas"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-2xl border border-orange-200 bg-white px-5 py-3 font-bold text-zinc-800 shadow-sm"
-                >
-                  Ver Instagram
-                </a>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-sm ring-1 ring-orange-100">
-              <iframe
-                src="https://www.google.com/maps?q=Til%20Til%201980%20%C3%91u%C3%B1oa&output=embed"
-                width="100%"
-                height="100%"
-                className="min-h-[380px] rounded-[1.5rem] border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Mapa de Lowcost Lukas"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section id="contacto" className="pb-24 pt-10">
         <div className="mx-auto max-w-4xl px-6">
@@ -392,7 +340,7 @@ export default function Page() {
 
               <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">Haz tu pedido</h2>
               <p className="mx-auto mt-4 max-w-2xl text-zinc-600">
-                La página ya quedó con mapa, catálogo, precios de referencia, galería de ejemplo y enlaces directos para que se vea mucho más profesional.
+                Realiza tus pedidos fácilmente por WhatsApp. Despacho en Ñuñoa y comunas cercanas.
               </p>
 
               <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -403,7 +351,7 @@ export default function Page() {
 
                 <div className="rounded-2xl bg-orange-50 p-5">
                   <p className="text-sm font-semibold text-zinc-500">Dirección</p>
-                  <p className="mt-2 font-bold text-zinc-900">Til Til 1980, Ñuñoa</p>
+                  <p className="mt-2 font-bold text-zinc-900">Pedidos por WhatsApp</p>
                 </div>
 
                 <div className="rounded-2xl bg-orange-50 p-5">
@@ -466,5 +414,3 @@ export default function Page() {
     </main>
   )
 }
-
-
